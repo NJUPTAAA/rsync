@@ -1,7 +1,7 @@
 version: "3"
 services:
   oj-rsync-master:
-    image: oj_rsync
+    image: njuptaaa/rsync
     container_name: oj-rsync
     volumes:
       - $PWD/storage/test_case:/test_case:ro
@@ -14,7 +14,7 @@ services:
       - "0.0.0.0:873:873"
     
   oj-rsync-slave:
-    image: oj-rsync
+    image: njuptaaa/rsync
     volumes:
       - $PWD/tests/test_case:/test_case
       - $PWD/log:/log
