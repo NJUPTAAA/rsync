@@ -22,3 +22,4 @@ services:
       - RSYNC_MODE=slave
       - RSYNC_USER=ojrsync
       - RSYNC_PASSWORD=CHANGE_THIS_PASSWORD
+      - RSYNC_MASTER_ADDR=127.0.0.1
