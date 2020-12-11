@@ -14,7 +14,7 @@ services:
     container_name: noj-rsync
     volumes:
       - /path-to-noj/storage/test_case:/test_case
-      - /path-to-noj/storage/log:/log
+      - /path-to-noj/storage/logs:/log
     environment:
       - RSYNC_MODE=master
       - RSYNC_USER=ojrsync
