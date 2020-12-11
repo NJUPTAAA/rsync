@@ -1,0 +1,13 @@
+version: "3"
+services:
+  noj-rsync-slave:
+    image: njuptaaa/rsync
+    container_name: noj-rsync
+    volumes:
+      - $PWD/data/backend/test_case:/test_case:ro
+      - $PWD/data/rsync_log:/log
+    environment:
+      - RSYNC_MODE=slave
+      - RSYNC_USER=ojrsync
+      - RSYNC_PASSWORD=CHANGE_THIS_PASSWORD
+      - RSYNC_MASTER_ADDR=NOJ_MAIN_SERVICE_ADDR
